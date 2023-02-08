@@ -6,7 +6,14 @@ import { OrbitControls } from '@react-three/drei';
 function App() {
 	return (
 		<>
-			<Canvas></Canvas>
+			<Canvas>
+				<OrbitControls autoRotate={true} />
+				<mesh>
+					<boxGeometry args={[1, 1, 1]} />
+					<meshStandardMaterial attach='material' color={0xa3b18a} />
+					<ambientLight intensity={1} />
+				</mesh>
+			</Canvas>
 		</>
 	);
 }
