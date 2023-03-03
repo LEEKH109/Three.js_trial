@@ -2,12 +2,10 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
-function Square() {
+function TestModel() {
 	return (
 		<>
-			<Canvas camera={{ position: [2, 2, 10], fov: 20 }}>
-				<ambientLight intensity={1} />
-				<spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+			<Canvas>
 				<OrbitControls autoRotate={true} />
 				<mesh>
 					<boxGeometry args={[1, 1, 1]} />
@@ -19,4 +17,4 @@ function Square() {
 	);
 }
 
-export default Square;
+export default TestModel;
